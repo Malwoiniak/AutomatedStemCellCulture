@@ -54,7 +54,7 @@ if __name__ == '__main__':
                           dir_experimental_6well, dir_6well_out_cellcount)
 
     else: #otherwise bbbdiff plate
-        plt_values = get_plt_spec_info('start datetime in conditioned media','harvest datetime',dir_bbb_export, bbbdiff_cols,
+        plt_values = get_plt_spec_info('start datetime in UM media','harvest datetime',dir_bbb_export, bbbdiff_cols,
                           dir_experimental_bbbdiff, dir_bbbdiff_out_cellcount)
     #create an empty df to append data to in each iter
     df_final = pd.DataFrame(columns = plt_values['export_file'].columns)
