@@ -75,7 +75,8 @@ if __name__ == '__main__':
         df_cellcount_merged = df_cellcount_trans.merge(plt_values['export_file'],how='left', on='Barcode')
         df_cellcount_merged = add_multiple_cols(df_cellcount_merged, plt_values["df_cols"],arguments)#add cols with vals from users input
         df_final = df_final.append(df_cellcount_merged, ignore_index = True)
-        #save import file with timestamp
-        df_final.to_excel(os.path.join(plt_values["dir_out"],f'{datetime.now().strftime("%Y%m%d-%H%M%S")}_{PLT_FORMAT.lower()}_import.xlsx'), index=False)
-        #save to import file, needed for automated imports by FileMaker
-        df_final.to_excel(os.path.join(plt_values["dir_out"], 'IMPORT_NOW.xlsx'), index=False)
+    #save import file with timestamp
+    df_final.to_excel(os.path.join(plt_values["dir_out"],f'{datetime.now().strftime("%Y%m%d-%H%M%S")}_{PLT_FORMAT.lower()}_import.xlsx'), index=False)
+    #save to import file, needed for automated imports by FileMaker
+    df_final.to_excel(os.path.join(plt_values["dir_out"], 'IMPORT_NOW.xlsx'), index=False)
+print(f'Operation sucesfull. Files saved in {plt_values["dir_out"]}')

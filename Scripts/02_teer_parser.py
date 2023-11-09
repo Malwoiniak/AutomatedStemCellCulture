@@ -67,3 +67,4 @@ if __name__ == '__main__':
     export_file.to_excel(os.path.join(dir_transwell_out, f'{datetime.now().strftime("%Y%m%d-%H%M%S")}_transwell_import.xlsx'), index=False)
     #save to import file, needed for automated imports by FileMaker
     export_file.to_excel(os.path.join(dir_transwell_out, 'IMPORT_NOW.xlsx'), index=False)
+print(f'Operation sucesfull. Files saved in {dir_transwell_out}')

@@ -15,6 +15,7 @@ import argparse
 from utils.input_readers import valid_plate_format
 from utils.cellcount_img_tools import get_json_data, add_columns
 from datetime import datetime
+import warnings
 
 def get_files_dir(dir_input, dir_output, dir_img, old_barcode_name):
     """Prepares a dictionary of directory and file-related parameters from users input"""
@@ -28,6 +29,8 @@ def get_files_dir(dir_input, dir_output, dir_img, old_barcode_name):
     return plt_dirs
 
 if __name__=='__main__':
+    #silence the UserWarning related to openpyxl
+    warnings.simplefilter("ignore", category=UserWarning)
     PARSER = argparse.ArgumentParser()
     PARSER.add_argument('-p', '--plt_format', help='Plate format for this run of imaging (4well, 6well OR BBBdiff)',
                       type=lambda x: valid_plate_format(x,options_plt_format), required=True)
@@ -82,3 +85,4 @@ if __name__=='__main__':
         export_file.to_excel(os.path.join(plt_dirs['dir_output'], 'IMPORT_NOW.xlsx'), index=False)
         #save import file with timestamp
         export_file.to_excel(dir_out, index=False)
+    print(f"Operation sucesfull. Files saved in {dir_json} and {plt_dirs['dir_output']}")
