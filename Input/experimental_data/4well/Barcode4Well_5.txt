@@ -26,7 +26,7 @@ Total circularity sum : 1592.905029
 Background intensity sum : 10180
 
 Settings:
-Cell type : ASC
+Cell type : XYZ
 Threshold (%) : 85
 Center threshold (%) : 65
 Minimum diameter (microns) : 5.00
