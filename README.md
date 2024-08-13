@@ -21,7 +21,7 @@ This a small, **a proof-of-concept** pipeline, tailored to an automated human in
 
 ### Installation instructions
 
-ASCC requires Python (3.7+), pandas and numpy. You can install the necessary dependencies by following a few simple steps:
+ASCC requires Python (3.8.12), pandas and numpy. You can install the necessary dependencies by following a few simple steps:
 
 1.	Download the full pipeline [here]( https://github.com/Malwoiniak/AutomatedStemCellCulture/archive/refs/heads/main.zip)
 2.	Alternatively, you can clone the repository by running:
